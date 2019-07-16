@@ -21,12 +21,12 @@ public class GeneralFilter implements  Filter  {
 
         HttpServletRequestWrapperImpl requestWrapper = new HttpServletRequestWrapperImpl((HttpServletRequest) servletRequest);
         //The initial time.
-        long startMiliSeconds = Calendar.getInstance().getTimeInMillis();
+        long startMilliSeconds = Calendar.getInstance().getTimeInMillis();
 
         filterChain.doFilter(requestWrapper, servletResponse);
 
         //The spend time
-        Long spendTime = Calendar.getInstance().getTimeInMillis() - startMiliSeconds;
+        Long spendTime = Calendar.getInstance().getTimeInMillis() - startMilliSeconds;
 
         logger.info("Resource requested: {} ----- Time spend:  {}  -----  Status:  {}",requestWrapper.getRequestURI(),spendTime,((HttpServletResponse)servletResponse).getStatus());
     }
