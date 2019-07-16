@@ -17,6 +17,13 @@ public class GeneralFilter implements  Filter  {
 
     private static final Logger logger = LogManager.getLogger(GeneralFilter.class);
 
+
+
+    public void init(FilterConfig arg0) throws ServletException {
+
+    }
+
+
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
         HttpServletRequestWrapperImpl requestWrapper = new HttpServletRequestWrapperImpl((HttpServletRequest) servletRequest);
@@ -28,6 +35,6 @@ public class GeneralFilter implements  Filter  {
         //The spend time
         Long spendTime = Calendar.getInstance().getTimeInMillis() - startMilliSeconds;
 
-        logger.info("Resource requested: {} ----- Time spend:  {}  -----  Status:  {}",requestWrapper.getRequestURI(),spendTime,((HttpServletResponse)servletResponse).getStatus());
+        logger.info("Resource requested: {}        Time spend:  {}         Status:  {}        IP client: {}        User : {}",requestWrapper.getRequestURI(),spendTime,((HttpServletResponse)servletResponse).getStatus(),requestWrapper.getRemoteAddr(),requestWrapper.getRemoteUser());
     }
 }
