@@ -3,20 +3,12 @@
     <Appenders>
         <File name="MyFile" fileName="app.log">
             <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+                <Pattern>%d %p %m%n</Pattern>
             </PatternLayout>
         </File>
         <Async name="Async">
             <AppenderRef ref="MyFile"/>
         </Async>
-
-
-            <Console name="console" target="SYSTEM_OUT">
-                <PatternLayout
-                        pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
-            </Console>
-
-
     </Appenders>
     <Loggers>
         <Root level="debug">

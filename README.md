@@ -12,7 +12,7 @@ The information registered is:
 *   The request's size
 
 This is an example of saved information :   
-> 2019-07-16 22:35:42,018 INFO j.p.f.c.f.GeneralFilter [default task-128] Resource requested: /test/        Time spend:  1         Status:  200        IP client: 10.4.13.234        User : User1
+> 19-07-17 15:24:52,812 INFO Resource requested: /test/        Time spend:  1         Status:  200        IP client: 10.4.13.234        User : User1
  
 In futures versions I want add more options to save the information, like save into a database, or send the information to server 
 
