@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO" name="MyApp" packages="">
     <Appenders>
-        <File name="MyFile" fileName="app.log">
+        <File name="MyFile" fileName="performance-logs/app.log">
             <PatternLayout>
                 <Pattern>%d %p %m%n</Pattern>
             </PatternLayout>
