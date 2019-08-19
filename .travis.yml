@@ -8,8 +8,8 @@ before_install:
   - cd jdss.performance.filter.infra/logstash/
   - docker build -t javier .
 
-script:
-  - mvn install
+#script:
+#  - mvn install
 
 after_success:
 
