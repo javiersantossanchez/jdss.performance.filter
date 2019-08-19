@@ -1,4 +1,10 @@
 language: java
 sudo: false # faster builds
 
-script: "mvn install"
+services:
+  - docker
+
+
+script:
+  - mvn install
+  - docker build -t javier -f logstash/Dockerfile
