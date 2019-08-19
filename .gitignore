@@ -10,3 +10,9 @@ jdss\.performance\.filter\.asppTest/target/
 jdss\.performance\.filter\.asppTest/jdss\.performance\.filter\.asppTest\.iml
 
 jdss\.performance\.filter\.core/app\.log
+
+jdss\.performance\.filter\.infra/deployment\.scripts/deployments/test\.war
+
+jdss\.performance\.filter\.infra/deployment\.scripts/deployments/test\.war\.deployed
+
+jdss\.performance\.filter\.core/performance-logs/app\.log

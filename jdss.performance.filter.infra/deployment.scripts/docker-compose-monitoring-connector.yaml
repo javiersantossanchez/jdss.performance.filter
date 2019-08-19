@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+
+  logstash:
+    image: javier
+    container_name: logstash
+    hostname: logstash
+    networks:
+    - performance-net
+    volumes:
+    -  ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    -  log:/usr/share/logstash/performance-logs

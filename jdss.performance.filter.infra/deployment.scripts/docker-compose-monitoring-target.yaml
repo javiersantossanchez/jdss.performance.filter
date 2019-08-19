@@ -1,0 +1,14 @@
+version: '3.0'
+
+services:
+  emp-server:
+    image: jboss/wildfly
+    container_name: emp-server
+    hostname: emp-server
+    networks:
+    - performance-net
+    volumes:
+    - log:/opt/jboss/performance-logs
+    - ./deployments:/opt/jboss/wildfly/standalone/deployments
+    ports:
+    - "8080:8080"

@@ -4,29 +4,6 @@ volumes:
   log:
 
 services:
-  emp-server:
-    image: jboss/wildfly
-    container_name: emp-server
-    hostname: emp-server
-    networks:
-    - performance-net
-    volumes:
-    - log:/opt/jboss/performance-logs
-    - ./deployments:/opt/jboss/wildfly/standalone/deployments
-    ports:
-    - "8080:8080"
-
-
-  logstash:
-    image: javier
-    container_name: logstash
-    hostname: logstash
-    networks:
-    - performance-net
-    volumes:
-    -  ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-    -  log:/usr/share/logstash/performance-logs
-
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
     container_name: elasticsearch
