@@ -12,4 +12,4 @@ script:
 
 after_success:
   - echo "Dog_080207D" | docker login -u "javierdavidsantos" --password-stdin
-  - docker push "javierdavidsantos/jajas:1";
+  - docker push "javierdavidsantos/jajas";
