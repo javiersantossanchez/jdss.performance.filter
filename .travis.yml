@@ -7,4 +7,5 @@ services:
 
 script:
   - mvn install
-  - docker build -t javier -f logstash/Dockerfile
+  - cd jdss.performance.filter.infra/logstash/
+  - docker build -t javier .
