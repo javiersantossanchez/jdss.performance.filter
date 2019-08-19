@@ -2,6 +2,7 @@ version: '3.0'
 
 services:
 
+  # the service use to read and parse the logs files.
   logstash:
     image: javier
     container_name: logstash
@@ -9,5 +10,4 @@ services:
     networks:
     - performance-net
     volumes:
-    -  ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     -  log:/usr/share/logstash/performance-logs

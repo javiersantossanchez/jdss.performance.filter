@@ -4,6 +4,7 @@ volumes:
   log:
 
 services:
+  #The service used to stock the monitoring records.
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
     container_name: elasticsearch
@@ -15,6 +16,7 @@ services:
     environment:
     - discovery.type=single-node
 
+  #The service used to show the results, on graphs tables, pipe charts, etc
   kibana:
     image: docker.elastic.co/kibana/kibana:7.2.0
     container_name: kibana

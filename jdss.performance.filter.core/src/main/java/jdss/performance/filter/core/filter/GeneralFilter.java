@@ -35,6 +35,6 @@ public class GeneralFilter implements  Filter  {
         //The spend time
         Long spendTime = Calendar.getInstance().getTimeInMillis() - startMilliSeconds;
 
-        logger.info("{} {} {} {} {}",requestWrapper.getRequestURI(),spendTime,((HttpServletResponse)servletResponse).getStatus(),requestWrapper.getRemoteAddr(),requestWrapper.getRemoteUser());
+        logger.info("{} {} {} {} {} {}",requestWrapper.getRequestURI(),spendTime,((HttpServletResponse)servletResponse).getStatus(),requestWrapper.getRemoteAddr(),requestWrapper.getRemoteUser(),requestWrapper.getMethod());
     }
 }

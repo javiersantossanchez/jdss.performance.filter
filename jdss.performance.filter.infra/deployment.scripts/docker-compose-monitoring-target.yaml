@@ -1,10 +1,11 @@
 version: '3.0'
 
 services:
-  emp-server:
+  #an example container with an application using the filter
+  example-app:
     image: jboss/wildfly
-    container_name: emp-server
-    hostname: emp-server
+    container_name: example-app
+    hostname: example-app
     networks:
     - performance-net
     volumes:
