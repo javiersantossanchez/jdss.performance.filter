@@ -4,8 +4,14 @@ sudo: false # faster builds
 services:
   - docker
 
+before_install:
+  - cd jdss.performance.filter.infra/logstash/
+  - docker build -t javier .
 
 script:
   - mvn install
-  - cd jdss.performance.filter.infra/logstash/
-  - docker build -t javier .
+
+after_success:
+
+  echo "Dog_080207D" | docker login -u "javierdavidsantos" --password-stdin
+  docker push "javierdavidsantos/jajas:1";
