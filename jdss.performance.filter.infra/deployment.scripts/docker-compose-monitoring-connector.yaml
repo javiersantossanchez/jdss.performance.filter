@@ -4,7 +4,7 @@ services:
 
   # the service use to read and parse the logs files.
   logstash:
-    image: javier
+    image: javierdavidsantos/logstash.performance.monitoring
     container_name: logstash
     hostname: logstash
     networks:

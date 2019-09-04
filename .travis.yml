@@ -8,8 +8,8 @@ services:
 script:
   - mvn install
   - cd jdss.performance.filter.infra/logstash/
-  - docker build -t javierdavidsantos/jajas .
+  - docker build -t javierdavidsantos/logstash.performance.monitoring .
 
 after_success:
   - echo "Dog_080207D" | docker login -u "javierdavidsantos" --password-stdin
-  - docker push "javierdavidsantos/jajas";
+  - docker push "javierdavidsantos/logstash.performance.monitoring";
