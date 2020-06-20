@@ -1,4 +1,4 @@
-#Plataform to monitoring and reporting performance on java applications
+## Plataform to monitoring and reporting performance on java applications
 
 A small personal project, The main idea of this project is to integrate and configure several tools to 
 build a platform to helps to developers to register and monitoring the performance of request on a Java Web applications.
