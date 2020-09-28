@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.*;
 
+/***
+ * @author Javier Santos (javier.david.santos@gmail.com)
+ * @version 1.0
+ */
 public class HttpServletRequestWrapperImpl extends HttpServletRequestWrapper {
 
     private static final Logger logger = LogManager.getLogger(HttpServletRequestWrapperImpl.class);
@@ -19,7 +23,7 @@ public class HttpServletRequestWrapperImpl extends HttpServletRequestWrapper {
         requestBody = readRequestBody(request);
     }
 
-    private String readRequestBody(HttpServletRequest request){
+    private String readRequestBody(final HttpServletRequest request){
 
         String requestBodyTMP;
         StringBuilder requestBodyBuilder = new StringBuilder();

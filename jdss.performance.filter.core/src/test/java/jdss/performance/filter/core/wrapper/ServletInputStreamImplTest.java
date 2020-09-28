@@ -5,22 +5,27 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
 
+/***
+ *  Class with unit test for @{ServletInputStreamImpl}
+ *  @author Javier Santos (javier.david.santos@gmail.com)
+ *  @version 1.0
+ */
 public class ServletInputStreamImplTest {
 
     private final ServletInputStreamImpl servletInputStream = new ServletInputStreamImpl();
 
     @Test
-    void callNotImplementedMethodIsFinished(){
+    void callToNotImplementedMethodIsFinished(){
         Assertions.assertThrows(RuntimeException.class, () -> servletInputStream.isFinished());
     }
 
     @Test
-    void callNotImplementedMethodIsReady(){
+    void callToNotImplementedMethodIsReady(){
         Assertions.assertThrows(RuntimeException.class, () -> servletInputStream.isReady());
     }
 
     @Test
-    void callNotImplementedMethodSetReadListener(){
+    void callToNotImplementedMethodSetReadListener(){
         Assertions.assertThrows(RuntimeException.class, () -> servletInputStream.setReadListener(null));
     }
 
